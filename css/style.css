@@ -1,3 +1,4 @@
+/*Todas las paginas*/
 body{
     background: #F5F5DC;
     font-family: Arial, sans-serif;
@@ -59,6 +60,7 @@ div{
     width: 90%;
     margin: 0 50px;
     padding: 0.3%;
+
 }
 .whatsapp {
     position:fixed;
@@ -76,17 +78,39 @@ div{
   .whatsapp >img {
     padding: 2px;
   }
+  footer {
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0; /* Ajusta el relleno según sea necesario */
+    text-align: center; /* Ajusta la alineación según tu diseño */
+}
+  footer > div{
+    background-color: #F5F5DC; 
+    padding-top: 1%;
+    width: 60%;
+    margin-left: 25%;
+}
+@media screen and (max-width: 768px) {
+    /* Ejemplo: Reducir el margen inferior */
+    footer {
+        margin-bottom: 20px; /* Ajusta según sea necesario */
+    }
+}
+  /*Index*/
+
   .slider{
-    width: 80%;
-    height: 50vh;
+    width: 90%;
+    height: 90vh;
     overflow: hidden;  
     margin: auto;
-    
   }
+
   .slider ul{
       display: flex;
       animation: cambio 20s infinite alternate linear;
       width: 390%;
+      margin: 0;
+      padding: 0;
   }
   .slider li{
       width: 100%;
@@ -101,28 +125,34 @@ div{
       0%{margin-left: 0;}
       20%{margin-left: 0;}
       
-      25%{margin-left: -100%;}
-      45%{margin-left: -100%;}
+      25%{margin-left: -98%;}
+      45%{margin-left: -98%;}
       
-      50%{margin-left: -200%;}
-      70%{margin-left: -200%;}
+      50%{margin-left: -196%;}
+      70%{margin-left: -196%;}
       
-      75%{margin-left: -300%;}
-      100%{margin-left: -300%;}
+      75%{margin-left: -294%;}
+      100%{margin-left: -294%;}
   }
   @media only screen and (min-width:320px) and (max-width:768px){
     .slider, .slider ul, .slider img{
-      height: 100vh;
+      height: 90vh;
+    }
+    .grid, .grid>div{
+        margin-left: 4%;
     }
   }
 
 .grid{
     background-color: #F5F5DC;;
-    width: 80%;
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1%;
-    
+    grid-template-columns: repeat(3, 32%);
+    row-gap: 2%;
+
 }
 
 .grid div{
@@ -130,12 +160,26 @@ div{
     display: grid;
     place-items: center;
     font-weight: 600;
-
+    text-align: center;
 }
 .grid div img{
 width: 50%;
+max-width: 50%;
 padding-bottom: 1%;
+height: auto;
 }
+/*Quienes somos*/
+
+.historia{
+    text-align: center;
+    background: #eee4c0;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+}
+
+/*Contactenos*/
 .container {
     width: 80%;
     max-width: 80%;
@@ -195,6 +239,7 @@ button:hover {
     font-size: 2em;
     margin-top: 20px;
 }
+/*Ubicación*/
 .mapa{
     margin: 10%;
     margin-right: 6%;
@@ -204,18 +249,5 @@ button:hover {
     width: 80%;
     max-width: 90%;
 }
-footer > div{
-    background-color: #fff;
-    padding-top: 1%;
-    width: 45%;
-    margin-left: 25%;
-}
 
-.historia{
-    text-align: center;
-    background: #eee4c0;
-    border-radius: 5px;
-    width: 90%;
-    margin: auto;
-    padding: 1%;
-}
+
