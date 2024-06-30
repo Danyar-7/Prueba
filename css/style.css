@@ -88,19 +88,15 @@ div{
     background-color: #F5F5DC; 
     padding-top: 1%;
     width: 70%;
-    margin-left: 25%;
+    margin-left: auto;
 }
-@media screen and (max-width: 768px) {
-    /* Ejemplo: Reducir el margen inferior */
-    footer {
-        margin-bottom: 20px; /* Ajusta según sea necesario */
-    }
-}
+
   /*Index*/
 
   .slider{
-    width: 90%;
-    height: 60%;
+    width: 80%;
+    height: 50%;
+    max-height: 50%;
     overflow: hidden;  
     margin: auto;
   }
@@ -118,7 +114,7 @@ div{
   }
   .slider img{
       width: 90%;
-      height: 90%;
+      height: 70%;
       max-width: 90%;
   }
   @keyframes cambio{
