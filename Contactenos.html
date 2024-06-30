@@ -21,7 +21,7 @@
     </header>
     <div class="container">
         <h1>Formulario de Contacto</h1>
-        <form action="https://formsubmit.co/danyar-7@hotmail.com" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/danyar-7@hotmail.com" method="POST">
             <div class="form-group">
                 <input type="text" id="name" name="name" placeholder="Nombre" required>
             </div>
@@ -35,6 +35,7 @@
                 <button type="submit">Enviar</button>
             </div>
         </form>
+        <div id="confirmation">Mensaje enviado exitosamente</div>
     </div>
 
     <a href="https://api.whatsapp.com/send?phone=5731&text=Hola, Necesito mas información!" class="whatsapp" target="_blank"> 
@@ -44,5 +45,20 @@
     <footer>
         <div id="copyright">Copyright&copy; 2024 Dany Sepúlveda - Todos los derechos reservados</div>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            fetch(this.action, {
+                method: this.method,
+                body: new FormData(this)
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('confirmation').style.display = 'block';
+                    this.reset();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
